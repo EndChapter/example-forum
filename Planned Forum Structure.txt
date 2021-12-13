@@ -76,82 +76,84 @@ Pages And Contents:
 
 Project Steps:
 
-1. Project Create		                           (Configuration)                                      ✓
+1. Project Create		                            (Configuration)                                     ✓
 
-2. Project Configuration	                       (Configuration)                                      ✓(barely)
+2. Project Configuration	                        (Configuration)                                     ✓(barely)
 
-3. Creating Migration File	                       (Database)                                           ✓
+3. Creating Migration File	                        (Database)                                          ✓
 3.1. Create Database
 3.2. Create User Table
 3.3. Create Categories Table
 3.4. Create PrivateMessages Table
 
-4. Add Vue.js and configure Vue(node one)
+4. Add Dockerfile                                   (Database)
 
-5. Write UI			                                (View)
-5.1. Write Navbar
-5.2. Write Footer
-5.3. Write Background
+5. Add Vue.js and configure Vue(node one)
 
-6. Write Sign-On Page		                        (Model-View-Controller)
-6.1. Create Sign-On Model                           (I think I can use Eloquent ORM in here)
-6.2. Create Sign-On Controller
-6.3. Create Sign-On View
+6. Write UI			                                (View)
+6.1. Write Navbar
+6.2. Write Footer
+6.3. Write Background
 
-7. Write Sign-In Page 		                        (Model-View-Controller)
-7.1. Create Sign-In Model                           (I think I can use Eloquent ORM in here)
-7.2. Create Sign-In Controller
-7.3. Create Sign-In View
+7. Write Sign-On Page		                        (Model-View-Controller)
+7.1. Create Sign-On Model                           (I think I can use Eloquent ORM in here)
+7.2. Create Sign-On Controller
+7.3. Create Sign-On View
 
-8. Write Login Page 		                        (Model-View-Controller)
-8.1. Create Login Model                             (I think I can use Eloquent ORM in here)
-8.2. Create Login Controller
-8.3. Create Login View
+8. Write Sign-In Page 		                        (Model-View-Controller)
+8.1. Create Sign-In Model                           (I think I can use Eloquent ORM in here)
+8.2. Create Sign-In Controller
+8.3. Create Sign-In View
 
-9. Write Categories Page	                        (Model-View-Controller)
-9.1. Create Categories Model                        (I think I can use Eloquent ORM in here)
-9.2. Create Categories Controller
-9.3. Create Categories View
+9. Write Login Page 		                        (Model-View-Controller)
+9.1. Create Login Model                             (I think I can use Eloquent ORM in here)
+9.2. Create Login Controller
+9.3. Create Login View
 
-10. Write Threads Page		                        (Database-Model-View-Controller)
-10.1. Create Threads Table Under Categories Table
-10.2. Create Categories Model                        (I think I can use Eloquent ORM in here)
-10.3. Create Categories Controller
-10.4. Create Categories View
+10. Write Categories Page	                        (Model-View-Controller)
+10.1. Create Categories Model                        (I think I can use Eloquent ORM in here)
+10.2. Create Categories Controller
+10.3. Create Categories View
 
-11. Write Replies Page		                        (Database-Model-View-Controller)
-11.1. Create Replies Table Under Threads Table
-11.2. Create Replies Model                          (I think I can use Eloquent ORM in here)
-11.3. Create Replies Controller
-11.4. Create Replies View
+11. Write Threads Page		                        (Database-Model-View-Controller)
+11.1. Create Threads Table Under Categories Table
+11.2. Create Categories Model                        (I think I can use Eloquent ORM in here)
+11.3. Create Categories Controller
+11.4. Create Categories View
 
-12. Write "New Category" Page	                    (Model-View-Controller)
-12.1. Create newCategory Model                      (I think I can use Eloquent ORM in here)
-12.2. Create newCategory Controller
-12.3. Create newCategory View
+12. Write Replies Page		                        (Database-Model-View-Controller)
+12.1. Create Replies Table Under Threads Table
+12.2. Create Replies Model                          (I think I can use Eloquent ORM in here)
+12.3. Create Replies Controller
+12.4. Create Replies View
 
-13. Write "New Thread" Page	                        (Model-View-Controller)
-13.1. Create newThread Model                        (I think I can use Eloquent ORM in here)
-13.2. Create newThread Controller
-13.3. Create newThread View
+13. Write "New Category" Page	                    (Model-View-Controller)
+13.1. Create newCategory Model                      (I think I can use Eloquent ORM in here)
+13.2. Create newCategory Controller
+13.3. Create newCategory View
 
-14. Write "User Profile" Page	                    (Model-View-Controller)
-14.1. Create UserProfile Model                      (I think I can use Eloquent ORM in here)
-14.2. Create UserProfile Controller
-14.3. Create UserProfile View
+14. Write "New Thread" Page	                        (Model-View-Controller)
+14.1. Create newThread Model                        (I think I can use Eloquent ORM in here)
+14.2. Create newThread Controller
+14.3. Create newThread View
 
-15. Write Settings Page		                        (Model-View-Controller)
-15.1. Create Settings Model                         (I think I can use Eloquent ORM in here)
-15.2. Create Settings Controller
-15.3. Create Settings View
+15. Write "User Profile" Page	                    (Model-View-Controller)
+15.1. Create UserProfile Model                      (I think I can use Eloquent ORM in here)
+15.2. Create UserProfile Controller
+15.3. Create UserProfile View
 
-16. Write Setup Page		                        (Model-View-Controller)
-16.1. Create Setup Model                            (I think I can use Eloquent ORM in here)
-16.2. Create Setup Controller
-16.3. Create Setup View
+16. Write Settings Page		                        (Model-View-Controller)
+16.1. Create Settings Model                         (I think I can use Eloquent ORM in here)
+16.2. Create Settings Controller
+16.3. Create Settings View
+
+17. Write Setup Page		                        (Model-View-Controller)
+17.1. Create Setup Model                            (I think I can use Eloquent ORM in here)
+17.2. Create Setup Controller
+17.3. Create Setup View
 
 In Frontend:
-Vue
+Vue, Inertia
 
 In Backend:
 Laravel
