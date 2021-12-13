@@ -1,7 +1,5 @@
 Project Name: YoYo-Forum
 
-Planned End Date: 15.13.2021
-
 Database Requirements(PostgreSql):
 
 -> User:-------------------------------------------------------->
