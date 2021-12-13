@@ -12,9 +12,9 @@ Database Requirements(PostgreSql):
 --> IsMailHidden						                        |
 --> IsModerator							                        |
 --> IsAdmin							                            |
---> LastActivity							                        |
+--> LastActivity							                    |
 --> IsFounder							                        |
-								                                |					                |
+								                                |
 <---------------------------------------------------------------V
 --> Login:
 ---> VerifyCode
@@ -86,7 +86,7 @@ Project Steps:
 3.3. Create Categories Table
 3.4. Create PrivateMessages Table
 
-4. Add Vue.js and configure vue(node one)
+4. Add Vue.js and configure Vue(node one)
 
 5. Write UI			                                (View)
 5.1. Write Navbar
