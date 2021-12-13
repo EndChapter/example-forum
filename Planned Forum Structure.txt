@@ -1,0 +1,165 @@
+Project Name: YoYo-Forum
+
+Planned End Date: 15.13.2021
+
+Database Requirements(PostgreSql):
+
+-> User:-------------------------------------------------------->
+--> ID								|
+--> Nickname							|
+--> Password							|
+--> E-mail							|
+--> IsMailHidden						|
+--> IsModerator							|
+--> IsAdmin							|
+--> IsOnline							|
+--> IsFounder							|
+								|
+(Optional)							|			
+--> Subjects							|
+ |								|
+ V								|
+---> last subject check time.					|
+								|
+<---------------------------------------------------------------V
+--> Login:
+---> VerifyCode
+---> Location
+---> Ip adress
+---> Token
+---> LastLogin
+
+-> PrivateMessages:
+--> MessageID
+--> From
+--> To
+--> Subject
+--> Content
+--> SeenByFrom
+--> SeenByTo
+
+
+-> Categories:
+--> CategoryName 
+--> CategoryExplanation
+--> LastActivity
+--> Threads
+|
+V
+--> Threads:
+---> ThreadID
+---> Topic
+---> ThreadExplanation
+---> Views
+---> Replies
+---> IsPinned
+  |
+  V
+---> Replies:
+----> Reply ID
+----> Reply Time
+----> Reply content
+
+For writing replies and threads:
+
+-> Summernote
+
+Pages And Contents:
+
+-> Navbar
+-> Footer
+-> Sign on
+-> Sign in
+-> Login
+-> Categories
+-> Threads
+-> Replies
+-> New Category
+-> New Thread
+-> Profile
+-> Settings
+-> Forum Setup
+
+Project Steps:
+
+1. Project Create		(Configuration)
+
+2. Project Configuration	(Configuration)
+
+3. Creating Migration File	(Database)
+3.1. Create Database
+3.2. Create User Table
+3.3. Create Categories Table
+
+4. Write UI			(View)
+4.1. Write Navbar
+4.2. Write Footer
+4.3. Write Background
+
+5. Write Sign-On Page		(Model-View-Controller)
+5.1. Create Sign-On Model(I think I can use Eloquent ORM in here) 
+5.2. Create Sign-On Controller
+5.3. Create Sign-On View
+
+6. Write Sign-In Page 		(Model-View-Controller)
+6.1. Create Sign-In Model(I think I can use Eloquent ORM in here) 
+6.2. Create Sign-In Controller
+6.3. Create Sign-In View
+
+7. Write Login Page 		(Model-View-Controller)
+7.1. Create Login Model(I think I can use Eloquent ORM in here) 
+7.2. Create Login Controller
+7.3. Create Login View
+
+8. Write Categories Page	(Model-View-Controller)
+8.1. Create Categories Model(I think I can use Eloquent ORM in here) 
+8.2. Create Categories Controller
+8.3. Create Categories View
+
+9. Write Threads Page		(Database-Model-View-Controller)
+9.1. Create Threads Table Under Categories Table
+9.2. Create Categories Model(I think I can use Eloquent ORM in here) 
+9.3. Create Categories Controller
+9.4. Create Categories View
+
+10. Write Replies Page		(Database-Model-View-Controller)
+10.1. Create Replies Table Under Threads Table
+10.2. Create Replies Model(I think I can use Eloquent ORM in here) 
+10.3. Create Replies Controller
+10.4. Create Replies View
+
+11. Write "New Category" Page	(Model-View-Controller)
+11.1. Create newCategory Model(I think I can use Eloquent ORM in here) 
+11.2. Create newCategory Controller
+11.3. Create newCategory View
+
+12. Write "New Thread" Page	(Model-View-Controller)
+12.1. Create newThread Model(I think I can use Eloquent ORM in here) 
+12.2. Create newThread Controller
+12.3. Create newThread View
+
+13. Write "User Profile" Page	(Model-View-Controller)
+13.1. Create UserProfile Model(I think I can use Eloquent ORM in here) 
+13.2. Create UserProfile Controller
+13.3. Create UserProfile View
+
+14. Write Settings Page		(Model-View-Controller)
+13.1. Create Settings Model(I think I can use Eloquent ORM in here) 
+13.2. Create Settings Controller
+13.3. Create Settings View
+
+15. Write Setup Page		(Model-View-Controller)
+13.1. Create Setup Model(I think I can use Eloquent ORM in here) 
+13.2. Create Setup Controller
+13.3. Create Setup View
+
+In Frontend:
+Vue
+
+In Backend:
+Laravel
+
+In Future:
+Can be add roles.
+Can be add special threads.
+ 
