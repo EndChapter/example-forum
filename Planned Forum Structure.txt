@@ -86,7 +86,7 @@ Project Steps:
 3.3. Create Categories Table
 3.4. Create PrivateMessages Table
 
-4. Add Dockerfile                                   (Database)
+4. Add Dockerfile                                   (Configuration)
 
 5. Add Vue.js and configure Vue(node one)
 
