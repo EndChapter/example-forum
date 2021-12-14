@@ -29,6 +29,7 @@ class UsersModel extends Model
      * Adds New User to Database
      *
      * @param  stdClass $user
+     *
      * User class will contains this elements
      * <code>
      * @param string nickname - users nickname
@@ -36,6 +37,7 @@ class UsersModel extends Model
      * @param string email - user email(will be unique)
      * @param boolean is_mail_hidden - true if users e-mail hidden
      * </code>
+     *
      * @return void
      */
     public function add_new_user($user) {
@@ -54,10 +56,13 @@ class UsersModel extends Model
      *
      * @param  string nickname - Users nickname
      * @param  bool is_moderator - true if user will be moderator
+     *
      * @return void
      */
     public function ch_moderator($nickname, $is_moderator) {
-        DB::table("users")->where("nickname", $nickname)->update(["is_moderator" => $is_moderator]);
+        DB::table("users")
+            ->where("nickname", $nickname)
+            ->update(["is_moderator" => $is_moderator]);
     }
 
     /**
@@ -65,10 +70,13 @@ class UsersModel extends Model
      *
      * @param  string nickname - Users nickname
      * @param  bool email true - if user will be administrator
+     *
      * @return void
      */
     public function ch_admin($nickname, $is_admin) {
-        DB::table("users")->where("nickname", $nickname)->update(["is_admin" => $is_admin]);
+        DB::table("users")
+            ->where("nickname", $nickname)
+            ->update(["is_admin" => $is_admin]);
     }
 
     /**
@@ -76,26 +84,48 @@ class UsersModel extends Model
      *
      * @param  string nickname -  Users nickname
      * @param  bool is_admin - true if user will be founder
+     *
      * @return void
      */
     public function ch_founder($nickname, $is_founder) {
-        DB::table("users")->where("nickname", $nickname)->update(["is_founder" => $is_founder]);
+        DB::table("users")
+            ->where("nickname", $nickname)
+            ->update(["is_founder" => $is_founder]);
     }
 
     /**
      *  Delete'selected user
      *
      * @param  string nickname - Users nickname
+     *
      * @return void
      */
     public function delete_user($nickname) {
-        DB::table("users")->where("nickname", $nickname)->delete();
+        DB::table("users")
+            ->where("nickname", $nickname)
+            ->delete();
     }
 
+    /**
+     *  Gets selected user
+     *
+     * @param  string nickname - Users nickname
+     *
+     * @return Illuminate\Support\Collection
+     */
     public function get_user($nickname) {
-        return DB::table("users")->select([
-            "nickname", "email", "is_mail_hidden", "is_moderator", "is_admin", "is_founder", "last_activity"
-        ])->where("nickname", $nickname);
+        return
+        DB::table("users")
+            ->select([
+                "nickname",
+                "email",
+                "is_mail_hidden",
+                "is_moderator",
+                "is_admin",
+                "is_founder",
+                "last_activity"
+            ])
+            ->where("nickname", $nickname);
     }
 
 }
