@@ -62,5 +62,4 @@ RUN chown -R nobody:nobody /var/www/html/storage
 
 EXPOSE 80
 CMD ["postgres"]
-#You will run supervisord in cli
 #And yes I can use containers for development with vscode
