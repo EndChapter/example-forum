@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class PrivateMessagesModel extends Model
 {
@@ -34,8 +35,13 @@ class PrivateMessagesModel extends Model
      * </code>
      * @return void
      */
-    public function send_private_message($usersEmail) {
-        DB::table("users")->where("email", $usersEmail)->delete();
+    public function send_private_message($private_message) {
+        DB::table("private_messages")->insert([
+            "from" => $private_message->from,
+            "to" => $private_message->to,
+            "subject" => $private_message->subject,
+            "content" => $private_message->content
+        ]);
     }
 
 
