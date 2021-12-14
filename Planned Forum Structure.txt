@@ -27,7 +27,6 @@ Database Requirements(PostgreSql):
 --> To
 --> Subject
 --> Content
---> SeenByFrom
 --> SeenByTo
 
 
@@ -141,7 +140,7 @@ Project Steps:
 15.3. Create UserProfile View
 
 16. Write Settings Page		                        (Model-View-Controller)
-16.1. Create Settings Model         
+16.1. Create Settings Model
 16.2. Create Settings Controller
 16.3. Create Settings View
 
