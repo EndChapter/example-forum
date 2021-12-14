@@ -92,4 +92,10 @@ class UsersModel extends Model
         DB::table("users")->where("nickname", $nickname)->delete();
     }
 
+    public function get_user($nickname) {
+        return DB::table("users")->select([
+            "nickname", "email", "is_mail_hidden", "is_moderator", "is_admin", "is_founder", "last_activity"
+        ])->where("nickname", $nickname);
+    }
+
 }
