@@ -37,7 +37,7 @@ class UsersModel extends Model
      * </code>
      * @return void
      */
-    public function addNewUser($user) {
+    public function add_new_user($user) {
         $user->date = new DateTime();
         DB::table("users")->insert([
             "nickname" => $user->nickname,
