@@ -30,7 +30,7 @@ class PrivateMessagesModel extends Model
      * @param string from - sender(nickname)
      * @param string to - to be sent(nickname)
      * @param string subject - subject of the private message
-     * @param boolean is_mail_hidden - true if users e-mail hidden
+     * @param string content - content of the private message
      * </code>
      * @return void
      */
