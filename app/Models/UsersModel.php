@@ -37,7 +37,7 @@ class UsersModel extends Model
      * </code>
      * @return void
      */
-    public static function addNewUser($user) {
+    public function addNewUser($user) {
         $user->date = new DateTime();
         DB::table("users")->insert([
             "nickname" => $user->nickname,
@@ -55,7 +55,7 @@ class UsersModel extends Model
      * @param  bool is_moderator true if user will be moderator
      * @return void
      */
-    public static function ch_moderator($usersEmail, $is_moderator) {
+    public function ch_moderator($usersEmail, $is_moderator) {
         DB::table("users")->where("email", $usersEmail)->update(["is_moderator" => $is_moderator]);
     }
 
@@ -66,7 +66,7 @@ class UsersModel extends Model
      * @param  bool is_admin true if user will be administrator
      * @return void
      */
-    public static function ch_admin($usersEmail, $is_admin) {
+    public function ch_admin($usersEmail, $is_admin) {
         DB::table("users")->where("email", $usersEmail)->update(["is_admin" => $is_admin]);
     }
 
@@ -77,7 +77,7 @@ class UsersModel extends Model
      * @param  bool is_admin true if user will be founder
      * @return void
      */
-    public static function ch_founder($usersEmail, $is_founder) {
+    public function ch_founder($usersEmail, $is_founder) {
         DB::table("users")->where("email", $usersEmail)->update(["is_founder" => $is_founder]);
     }
 
@@ -87,7 +87,7 @@ class UsersModel extends Model
      * @param  string usersEmail Users e-mail
      * @return void
      */
-    public static function delete_user($usersEmail) {
+    public function delete_user($usersEmail) {
         DB::table("users")->where("email", $usersEmail)->delete();
     }
 
