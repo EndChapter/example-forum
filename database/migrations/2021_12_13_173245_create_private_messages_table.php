@@ -19,7 +19,7 @@ class CreatePrivateMessagesTable extends Migration
             $table->string('to');
             $table->string('subject');
             $table->string('content');
-            $table->boolean('seen_by_to');
+            $table->boolean('seen_by_to')->default(false);
             $table->timestamps();
         });
     }
