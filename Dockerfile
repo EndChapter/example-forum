@@ -20,7 +20,6 @@ nodejs \
 npm \
 php8 \
 php8-common \
-php8-fpm \
 php8-pdo \
 php8-opcache \
 php8-zip \
@@ -54,17 +53,12 @@ RUN rm -rf composer-setup.php
 RUN mkdir -p /run/php/
 RUN touch /run/php/php8.0-fpm.pid
 
-COPY .docker/php-fpm.conf /etc/php8/php-fpm.conf
 COPY .docker/php.ini-production /etc/php8/php.ini
 
 # Building process
 COPY . .
 RUN composer install --no-dev
 RUN chown -R nobody:nobody /var/www/html/storage
-
-# Configure supervisor
-RUN mkdir -p /etc/supervisor.d/
-COPY .docker/supervisord.conf /etc/supervisord.conf
 
 EXPOSE 80
 CMD ["postgres"]
