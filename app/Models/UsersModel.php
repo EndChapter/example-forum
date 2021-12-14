@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class UsersModel extends Model
 {
+    // TODO get user
     use HasFactory;
     /**
      * The table associated with the model.
@@ -51,44 +52,44 @@ class UsersModel extends Model
     /**
      * Changes selected user' moderate state
      *
-     * @param  string email Users e-mail
-     * @param  bool is_moderator true if user will be moderator
+     * @param  string nickname - Users nickname
+     * @param  bool is_moderator - true if user will be moderator
      * @return void
      */
-    public function ch_moderator($email, $is_moderator) {
-        DB::table("users")->where("email", $email)->update(["is_moderator" => $is_moderator]);
+    public function ch_moderator($nickname, $is_moderator) {
+        DB::table("users")->where("nickname", $nickname)->update(["is_moderator" => $is_moderator]);
     }
 
     /**
      * Changes selected user' administration state
      *
-     * @param  string usersEmail Users e-mail
-     * @param  bool email true if user will be administrator
+     * @param  string nickname - Users nickname
+     * @param  bool email true - if user will be administrator
      * @return void
      */
-    public function ch_admin($email, $is_admin) {
-        DB::table("users")->where("email", $email)->update(["is_admin" => $is_admin]);
+    public function ch_admin($nickname, $is_admin) {
+        DB::table("users")->where("nickname", $nickname)->update(["is_admin" => $is_admin]);
     }
 
     /**
      * Changes selected user' founder state
      *
-     * @param  string email Users e-mail
-     * @param  bool is_admin true if user will be founder
+     * @param  string nickname -  Users nickname
+     * @param  bool is_admin - true if user will be founder
      * @return void
      */
-    public function ch_founder($email, $is_founder) {
-        DB::table("users")->where("email", $email)->update(["is_founder" => $is_founder]);
+    public function ch_founder($nickname, $is_founder) {
+        DB::table("users")->where("nickname", $nickname)->update(["is_founder" => $is_founder]);
     }
 
     /**
      *  Delete'selected user
      *
-     * @param  string email Users e-mail
+     * @param  string nickname - Users nickname
      * @return void
      */
-    public function delete_user($email) {
-        DB::table("users")->where("email", $email)->delete();
+    public function delete_user($nickname) {
+        DB::table("users")->where("nickname", $nickname)->delete();
     }
 
 }

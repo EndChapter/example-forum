@@ -44,5 +44,23 @@ class PrivateMessagesModel extends Model
         ]);
     }
 
+    /**
+     * Gets inbox
+     *
+     * @param  string nickname - Users nickname
+     * @return stdClass object
+     */
+    public function get_inbox($nickname) {
+        return DB::table("private_messages")->where("to", $nickname);
+    }
 
+    /**
+     * Gets inbox
+     *
+     * @param  string nickname - Users nickname
+     * @return stdClass object
+     */
+    public function get_outbox($nickname) {
+        return DB::table("private_messages")->where("from", $nickname);
+    }
 }
