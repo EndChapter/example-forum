@@ -51,44 +51,44 @@ class UsersModel extends Model
     /**
      * Changes selected user' moderate state
      *
-     * @param  string usersEmail Users e-mail
+     * @param  string email Users e-mail
      * @param  bool is_moderator true if user will be moderator
      * @return void
      */
-    public function ch_moderator($usersEmail, $is_moderator) {
-        DB::table("users")->where("email", $usersEmail)->update(["is_moderator" => $is_moderator]);
+    public function ch_moderator($email, $is_moderator) {
+        DB::table("users")->where("email", $email)->update(["is_moderator" => $is_moderator]);
     }
 
     /**
      * Changes selected user' administration state
      *
      * @param  string usersEmail Users e-mail
-     * @param  bool is_admin true if user will be administrator
+     * @param  bool email true if user will be administrator
      * @return void
      */
-    public function ch_admin($usersEmail, $is_admin) {
-        DB::table("users")->where("email", $usersEmail)->update(["is_admin" => $is_admin]);
+    public function ch_admin($email, $is_admin) {
+        DB::table("users")->where("email", $email)->update(["is_admin" => $is_admin]);
     }
 
     /**
      * Changes selected user' founder state
      *
-     * @param  string usersEmail Users e-mail
+     * @param  string email Users e-mail
      * @param  bool is_admin true if user will be founder
      * @return void
      */
-    public function ch_founder($usersEmail, $is_founder) {
-        DB::table("users")->where("email", $usersEmail)->update(["is_founder" => $is_founder]);
+    public function ch_founder($email, $is_founder) {
+        DB::table("users")->where("email", $email)->update(["is_founder" => $is_founder]);
     }
 
     /**
      *  Delete'selected user
      *
-     * @param  string usersEmail Users e-mail
+     * @param  string email Users e-mail
      * @return void
      */
-    public function delete_user($usersEmail) {
-        DB::table("users")->where("email", $usersEmail)->delete();
+    public function delete_user($email) {
+        DB::table("users")->where("email", $email)->delete();
     }
 
 }
