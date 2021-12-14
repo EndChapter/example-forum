@@ -19,9 +19,9 @@ class CreateUsersTable extends Migration
             $table->string("password");
             $table->string("email")->unique();
             $table->boolean("is_mail_hidden");
-            $table->boolean("is_moderator");
-            $table->boolean("is_admin");
-            $table->boolean("is_founder");
+            $table->boolean("is_moderator")->default(false);
+            $table->boolean("is_admin")->default(false);
+            $table->boolean("is_founder")->default(false);
             $table->timestamp("last_activity");
         });
     }
