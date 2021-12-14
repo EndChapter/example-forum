@@ -29,5 +29,19 @@ class users extends Model
      */
     public $timestamps = false;
 
+    /**
+     * Adds New User to Database
+     *
+     * @param  stdClass()  $user
+     * <code>
+     * $type - person type
+     * $name - person name
+     * $age - person age
+     * </code>
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function addNewUser($user) {
+
+    }
 
 }
