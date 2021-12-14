@@ -32,11 +32,13 @@ class users extends Model
     /**
      * Adds New User to Database
      *
-     * @param  stdClass()  $user
+     * @param  stdClass $user
+     * user will contains this elements
      * <code>
-     * $type - person type
-     * $name - person name
-     * $age - person age
+     * $nickname - user nickname
+     * $password - user password
+     * $email - user email
+     * $email - user email
      * </code>
      * @return \Illuminate\Http\RedirectResponse
      */

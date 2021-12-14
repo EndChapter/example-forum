@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->string("nickname");
             $table->string("password");
             $table->string("email")->unique();
-            $table->string("pasword");
             $table->boolean("is_mail_hidden");
             $table->boolean("is_moderator");
             $table->boolean("is_admin");
