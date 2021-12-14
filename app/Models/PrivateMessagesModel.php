@@ -14,7 +14,7 @@ class PrivateMessagesModel extends Model
      *
      * @var string
      */
-    protected string $table = "users";
+    protected string $table = "private_messages";
 
     /**
      * The primary key associated with the table.
@@ -27,13 +27,19 @@ class PrivateMessagesModel extends Model
      *  Sends Private Message to user
      * @param  stdClass $private_message
      *
-     * private_message class will contains this elements
-     * <code>
-     * @param string from - sender(nickname)
-     * @param string to - to be sent(nickname)
-     * @param string subject - subject of the private message
-     * @param string content - content of the private message
-     * </code>
+     * Private_message class will contains this elements
+     *
+     * @param string $private_message->from
+     * Sender(nickname)
+     *
+     * @param string $private_message->to
+     * To be sent(nickname)
+     *
+     * @param string $private_message->subject
+     * Subject of the private message
+     *
+     * @param string $private_message->content
+     * Content of the private message
      *
      * @return void
      */
@@ -50,11 +56,13 @@ class PrivateMessagesModel extends Model
     /**
      * Gets inbox
      *
-     * @param string nickname - Users nickname
+     * @param string $nickname
+     * Users nickname
      *
      * @return Illuminate\Support\Collection
+     * Collection of the users inbox messages
      */
-    public function get_inbox($nickname) {
+    public function get_inbox(string $nickname) {
         return
         DB::table("private_messages")
             ->where("to", $nickname);
@@ -63,11 +71,13 @@ class PrivateMessagesModel extends Model
     /**
      * Gets inbox
      *
-     * @param string nickname - Users nickname
+     * @param string $nickname
+     * Users nickname
      *
      * @return Illuminate\Support\Collection
+     * Collection of the users outbox messages
      */
-    public function get_outbox($nickname) {
+    public function get_outbox(string $nickname) {
         return
         DB::table("private_messages")
             ->where("from", $nickname);
@@ -76,12 +86,15 @@ class PrivateMessagesModel extends Model
     /**
      *  Set seen status for inbox
      *
-     * @param string nickname - Users nickname
-     * @param string id - message id
+     * @param string $nickname
+     * Users nickname
+     *
+     * @param integer $id
+     * Message id
      *
      * @return void
      */
-    public function seen_by_to($nickname, $id) {
+    public function seen_by_to(string $nickname, int $id) {
         DB::table("private_messages")
             ->select("seen_by_to")
             ->where("to", $nickname)

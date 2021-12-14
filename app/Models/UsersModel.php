@@ -30,13 +30,19 @@ class UsersModel extends Model
      *
      * @param  stdClass $user
      *
-     * User class will contains this elements
-     * <code>
-     * @param string nickname - users nickname
-     * @param string password - users password
-     * @param string email - user email(will be unique)
-     * @param boolean is_mail_hidden - true if users e-mail hidden
-     * </code>
+     * User standart class will contains this elements
+     *
+     * @param string $user->nickname
+     * User nickname
+     *
+     * @param string $user->password
+     * User password
+     *
+     * @param string $user->email
+     * User email(will be unique)
+     *
+     * @param boolean $user->is_mail_hidden
+     * True if users e-mail hidden
      *
      * @return void
      */
@@ -54,12 +60,15 @@ class UsersModel extends Model
     /**
      * Changes selected user' moderate state
      *
-     * @param  string nickname - Users nickname
-     * @param  bool is_moderator - true if user will be moderator
+     * @param  string $nickname
+     * Users nickname
+     *
+     * @param  bool $is_moderator
+     * True if user will be moderator
      *
      * @return void
      */
-    public function ch_moderator($nickname, $is_moderator) {
+    public function ch_moderator(string $nickname, bool $is_moderator) {
         DB::table("users")
             ->where("nickname", $nickname)
             ->update(["is_moderator" => $is_moderator]);
@@ -68,12 +77,15 @@ class UsersModel extends Model
     /**
      * Changes selected user' administration state
      *
-     * @param  string nickname - Users nickname
-     * @param  bool email true - if user will be administrator
+     * @param  string $nickname
+     * Users nickname
+     *
+     * @param  bool $is_admin
+     * True if user will be administrator
      *
      * @return void
      */
-    public function ch_admin($nickname, $is_admin) {
+    public function ch_admin(string $nickname, bool $is_admin) {
         DB::table("users")
             ->where("nickname", $nickname)
             ->update(["is_admin" => $is_admin]);
@@ -82,12 +94,15 @@ class UsersModel extends Model
     /**
      * Changes selected user' founder state
      *
-     * @param  string nickname -  Users nickname
-     * @param  bool is_admin - true if user will be founder
+     * @param  string $nickname
+     * Users nickname
+     *
+     * @param  bool $is_founder
+     * True if user will be founder
      *
      * @return void
      */
-    public function ch_founder($nickname, $is_founder) {
+    public function ch_founder(string $nickname, bool $is_founder) {
         DB::table("users")
             ->where("nickname", $nickname)
             ->update(["is_founder" => $is_founder]);
@@ -96,11 +111,12 @@ class UsersModel extends Model
     /**
      *  Delete'selected user
      *
-     * @param  string nickname - Users nickname
+     * @param  string $nickname
+     * Users nickname
      *
      * @return void
      */
-    public function delete_user($nickname) {
+    public function delete_user(string $nickname) {
         DB::table("users")
             ->where("nickname", $nickname)
             ->delete();
@@ -109,11 +125,12 @@ class UsersModel extends Model
     /**
      *  Gets selected user
      *
-     * @param  string nickname - Users nickname
+     * @param  string $nickname
+     * Users nickname
      *
-     * @return Illuminate\Support\Collection
+     * @return Illuminate\Support\Collection collection of the results
      */
-    public function get_user($nickname) {
+    public function get_user(string $nickname) {
         return
         DB::table("users")
             ->select([
@@ -126,6 +143,10 @@ class UsersModel extends Model
                 "last_activity"
             ])
             ->where("nickname", $nickname);
+    }
+
+    public function edit_user($user){
+
     }
 
 }
