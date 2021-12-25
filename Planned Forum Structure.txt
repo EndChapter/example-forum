@@ -1,5 +1,7 @@
 Project Name: YoYo-Forum
 
+// TODO change database structure
+
 Database Requirements(PostgreSql):
 
 -> User:-------------------------------------------------------->

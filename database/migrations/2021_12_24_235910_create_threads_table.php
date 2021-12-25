@@ -19,6 +19,7 @@ class CreateThreadsTable extends Migration
             $table->string("topic");
             $table->string("explanation");
             $table->integer("views");
+            $table->string("nickname");
             //ids of the replies will be seperated by commas
             $table->string("reply_ids")->default("");
             $table->boolean("is_pinned");
