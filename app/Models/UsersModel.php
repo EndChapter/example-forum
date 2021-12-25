@@ -96,6 +96,25 @@ class UsersModel extends Model
     }
 
     /**
+     * Gets selected user' login information
+     *
+     * @param  string $nickname
+     * Users nickname
+     *
+     * @return Illuminate\Support\Collection collection of the results
+     * returns user' everything except password
+     */
+    public function get_login(string $nickname) {
+        return
+        DB::table("users")
+            ->select([
+                "email",
+                "password"
+            ])
+            ->where("nickname", $nickname);
+    }
+
+    /**
      * Changes selected user' e-mail
      *
      * @param  string $nickname
