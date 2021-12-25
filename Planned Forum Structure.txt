@@ -83,71 +83,60 @@ Project Steps:
 3.3. Create Categories Table
 3.4. Create PrivateMessages Table
 
-4. Add Dockerfile                                   (Configuration)
+4. Add Dockerfile                                   (Configuration)                                     ✓
 
-5. Add Vue.js and configure Vue(node one)
+5. Add Vue.js and configure Vue(node one)                                                               ✓
 
-6. Write UI			                                (View)
-6.1. Write Navbar
-6.2. Write Footer
-6.3. Write Background
+6. Add Database Models and Migrations               (Database-Model)                                    on-progress
 
-7. Write Sign-On Page		                        (Model-View-Controller)
-7.1. Create Sign-On Model
-7.2. Create Sign-On Controller
-7.3. Create Sign-On View
+7. Write UI			                                (View)
+7.1. Write Navbar
+7.2. Write Footer
+7.3. Write Background
 
-8. Write Sign-In Page 		                        (Model-View-Controller)
-8.1. Create Sign-In Model
-8.2. Create Sign-In Controller
-8.3. Create Sign-In View
+8. Write Sign-On Page		                        (View-Controller)
+8.1. Create Sign-On Controller
+8.2. Create Sign-On View
 
-9. Write Login Page 		                        (Model-View-Controller)
-9.1. Create Login Model
-9.2. Create Login Controller
-9.3. Create Login View
+9. Write Sign-In Page 		                        (View-Controller)
+9.1. Create Sign-In Controller
+9.2. Create Sign-In View
 
-10. Write Categories Page	                        (Model-View-Controller)
-10.1. Create Categories Model
-10.2. Create Categories Controller
-10.3. Create Categories View
+10. Write Login Page 		                        (View-Controller)
+10.1. Create Login Controller
+10.2. Create Login View
 
-11. Write Threads Page		                        (Database-Model-View-Controller)
-11.1. Create Threads Table Under Categories Table
-11.2. Create Categories Model
-11.3. Create Categories Controller
-11.4. Create Categories View
+11. Write Categories Page	                        (View-Controller)
+11.1. Create Categories Controller
+11.2. Create Categories View
 
-12. Write Replies Page		                        (Database-Model-View-Controller)
-12.1. Create Replies Table Under Threads Table
-12.2. Create Replies Model
-12.3. Create Replies Controller
-12.4. Create Replies View
+12. Write Threads Page		                        (View-Controller)
+12.1. Create Categories Controller
+12.2. Create Categories View
 
-13. Write "New Category" Page	                    (Model-View-Controller)
-13.1. Create newCategory Model
-13.2. Create newCategory Controller
-13.3. Create newCategory View
+13. Write Replies Page		                        (View-Controller)
+13.1. Create Replies Controller
+13.1. Create Replies View
 
-14. Write "New Thread" Page	                        (Model-View-Controller)
-14.1. Create newThread Model
-14.2. Create newThread Controller
-14.3. Create newThread View
+14. Write "New Category" Page	                    (View-Controller)
+14.1. Create newCategory Controller
+14.1. Create newCategory View
 
-15. Write "User Profile" Page	                    (Model-View-Controller)
-15.1. Create UserProfile Model
-15.2. Create UserProfile Controller
-15.3. Create UserProfile View
+15. Write "New Thread" Page	                        (View-Controller)
+15.1. Create newThread Controller
+15.1. Create newThread View
 
-16. Write Settings Page		                        (Model-View-Controller)
-16.1. Create Settings Model
-16.2. Create Settings Controller
-16.3. Create Settings View
+16. Write "User Profile" Page	                    (View-Controller)
+16.1. Create UserProfile Controller
+16.2. Create UserProfile View
 
-17. Write Setup Page		                        (Model-View-Controller)
-17.1. Create Setup Model
-17.2. Create Setup Controller
-17.3. Create Setup View
+17. Write Settings Page		                        (View-Controller)
+17.1. Create Settings Controller
+17.2. Create Settings View
+
+18. Write Setup Page		                        (View-Controller)
+18.1. Create Setup Controller
+18.2. Create Setup View
 
 In Frontend:
 Vue, Inertia
