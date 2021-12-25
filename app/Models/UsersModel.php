@@ -72,7 +72,7 @@ class UsersModel extends Model
     }
 
     /**
-     *  Gets selected user
+     * Gets selected user
      *
      * @param  string $nickname
      * Users nickname
