@@ -92,13 +92,18 @@ class PrivateMessagesModel extends Model
      * @param integer $id
      * Message id
      *
+     * @param bool $seen
+     * True if seen by to
+     *
      * @return void
      */
-    public function seen_by_to(string $nickname, int $id) {
+    public function seen_by_to(string $nickname, int $id, bool $seen) {
         DB::table("private_messages")
             ->select("seen_by_to")
             ->where("to", $nickname)
             ->where("id", $id)
-            ->delete();
+            ->update([
+                "seen_by_to" => $seen,
+            ]);
     }
 }
