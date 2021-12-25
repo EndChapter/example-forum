@@ -13,13 +13,14 @@ class CreateThreadsTable extends Migration
      */
     public function up()
     {
+        // Add threads table explained as structure
         Schema::create('threads', function (Blueprint $table) {
             $table->id();
             $table->string("topic");
-            $table->string("thread_explanation");
-            $table->integer("Views");
+            $table->string("explanation");
+            $table->integer("views");
             //ids of the replies will be seperated by commas
-            $table->string("reply_ids");
+            $table->string("reply_ids")->default("");
             $table->boolean("is_pinned");
             $table->timestamps();
         });

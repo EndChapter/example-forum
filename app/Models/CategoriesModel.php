@@ -31,10 +31,10 @@ class CategoriesModel extends Model
      *
      * Category standart class will contains this elements
      *
-     * @param string $category->category_name
+     * @param string $category->name
      * Category name
      *
-     * @param string category_explanation
+     * @param string $category->explanation
      * Category explanation
      *
      * @return void
@@ -42,23 +42,23 @@ class CategoriesModel extends Model
     public function add_new_category($category) {
         $category->date = new DateTime();
         DB::table("categories")->insert([
-            "category_name" => $category->category_name,
-            "category_explanation" => $category->category_explanation,
-            "category_last_activity" => $category->date->getTimestamp(),
+            "name" => $category->name,
+            "explanation" => $category->explanation,
+            "last_activity" => $category->date->getTimestamp(),
         ]);
     }
 
     /**
      * Delete'selected category
      *
-     * @param  integer $categoryid
+     * @param  integer $id
      * Category Id
      *
      * @return void
      */
-    public function delete_category(int $categoryid) {
+    public function delete_category(int $id) {
         DB::table("categories")
-        ->where("id", $categoryid)
+        ->where("id", $id)
         ->delete();
     }
 
@@ -78,41 +78,41 @@ class CategoriesModel extends Model
      *
      * Category standart class will contains this elements
      *
-     * @param string $category->old_category_name
+     * @param string $category->old_name
      * Old category name
      *
-     * @param string $category->new_category_name
+     * @param string $category->new_name
      * (default = old category name) New category name
      *
-     * @param string $category->category_explanation
+     * @param string $category->explanation
      * (default= old category explanation) New category explanation
      *
      * @return bool
      */
     public function edit_category($category){
-        if(isset($category->category_explanation) && isset($category->new_category_name))
+        if(isset($category->explanation) && isset($category->new_name))
         {
             DB::table("categories")
-                ->where("category_name", $category->old_category_name)
+                ->where("name", $category->old_name)
                 ->update([
-                    "category_name" => $category->new_category_name,
-                    "category_explanation" => $category->category_explanation
+                    "name" => $category->new_name,
+                    "explanation" => $category->explanation
                 ]);
         }
-        elseif(isset($category->category_explanation))
+        elseif(isset($category->explanation))
         {
             DB::table("categories")
-                ->where("category_name", $category->old_category_name)
+                ->where("category_name", $category->old_name)
                 ->update([
-                    "category_explanation" => $category->category_explanation
+                    "category_explanation" => $category->explanation
                 ]);
         }
-        elseif(isset($category->new_category_name))
+        elseif(isset($category->new_name))
         {
             DB::table("categories")
-                ->where("category_name", $category->old_category_name)
+                ->where("category_name", $category->old_name)
                 ->update([
-                    "category_name" => $category->new_category_name
+                    "category_name" => $category->new_name
                 ]);
         }
 

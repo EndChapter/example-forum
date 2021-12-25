@@ -13,11 +13,12 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
+        // Add categories table explained as structure
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string("category_name");
-            $table->string("category_explanation");
-            $table->timestamp("category_last_activity");
+            $table->string("name");
+            $table->string("explanation");
+            $table->timestamp("last_activity");
             // Threads of the categories will be seperated by commas.
             $table->string("thread_ids");
             $table->timestamps();
