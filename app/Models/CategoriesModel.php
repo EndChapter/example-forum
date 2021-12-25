@@ -115,6 +115,5 @@ class CategoriesModel extends Model
                     "category_name" => $category->new_name
                 ]);
         }
-
     }
 }
