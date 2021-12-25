@@ -15,6 +15,12 @@ class CreateThreadsTable extends Migration
     {
         Schema::create('threads', function (Blueprint $table) {
             $table->id();
+            $table->string("topic");
+            $table->string("thread_explanation");
+            $table->integer("Views");
+            //ids of the replies will be seperated by commas
+            $table->string("reply_ids");
+            $table->boolean("is_pinned");
             $table->timestamps();
         });
     }
