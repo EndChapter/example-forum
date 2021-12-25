@@ -102,7 +102,6 @@ class UsersModel extends Model
      * Users nickname
      *
      * @return Illuminate\Support\Collection collection of the results
-     * returns user' everything except password
      */
     public function get_login(string $nickname) {
         return
