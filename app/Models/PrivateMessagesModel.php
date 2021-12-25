@@ -24,7 +24,7 @@ class PrivateMessagesModel extends Model
     protected $primaryKey = 'id';
 
     /**
-     *  Sends Private Message to user
+     * Sends Private Message to user
      * @param  stdClass $private_message
      *
      * Private_message class will contains this elements
@@ -84,7 +84,7 @@ class PrivateMessagesModel extends Model
     }
 
     /**
-     *  Set seen status for inbox
+     * Set seen status for inbox
      *
      * @param string $nickname
      * Users nickname

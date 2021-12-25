@@ -58,7 +58,7 @@ class UsersModel extends Model
     }
 
     /**
-     *  Delete'selected user
+     * Delete'selected user
      *
      * @param  string $nickname
      * Users nickname
